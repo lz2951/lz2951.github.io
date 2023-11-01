@@ -20,21 +20,31 @@ Column {data-width=650}
 ### Chart A
 
 ```{r}
-data("instacart")
+data("ny_noaa")
+ny_noaa =
+  ny_noaa |>
+  drop_na() |>
+  separate(date, sep = "-", into = c("year", "month", "day")) |>
+  mutate(year = as.numeric(year), month = as.numeric(month), day = as.numeric(day),
+         prcp = prcp/10, tmax = as.numeric(tmax)/10, tmin = as.numeric(tmin)/10) |>
+  filter(year > 2000) |>
+  filter(!str_detect(id, "30"))
 
-instacart = instacart[1:10000,]
-
-bar_ggplot =
-  instacart |>
-  group_by(aisle) |>
-  summarize(orders_from_aisle = n()) |>
-  filter(orders_from_aisle > 100) |>
-  ggplot(aes(x = fct_reorder(aisle, desc(orders_from_aisle)), y = orders_from_aisle)) +
-  geom_col() +
-  coord_flip() +
-  labs(x = "aisle", y = "orders belonging to certain aisle")
-
-ggplotly(bar_ggplot)
+ny_noaa |>
+  group_by(id, year) |>
+  summarize(
+    n_obs = n(),
+    mean_tmax = mean(tmax, na.rm = TRUE), 
+    mean_tmin = mean(tmin, na.rm = TRUE),
+  ) |>
+  mutate(
+    text_label = str_c(
+      "Number of observations:", n_obs, "\nStation id:", id, "\nYear:", year)
+  ) |>
+  plot_ly(x = ~mean_tmin, y = ~mean_tmax, type = "scatter", mode = "markers",
+          color = ~id, colors = "viridis", text = ~text_label) |>
+  layout(xaxis = list(title = "mean tmin (degrees C)"),
+         yaxis = list(title = "mean tmax (degrees C)"))
 ```
 
 Column {data-width=350}
@@ -43,12 +53,20 @@ Column {data-width=350}
 ### Chart B
 
 ```{r}
-
+ny_noaa |>
+  plot_ly(x = ~year, y = ~tmax, type = "box", name = "max temperature") |>
+  add_trace(y = ~tmin, type = "box", name = "min temperature") |>
+  layout(yaxis = list(title = "temperature (degree C)"))
 ```
 
 ### Chart C
 
 ```{r}
-
+ny_noaa |>
+  group_by(id, year) |>
+  summarize(sum_prcp = sum(prcp)) |>
+  plot_ly(x = ~year, y = ~sum_prcp, color = ~id, colors = "viridis", alpha = 0.5) |>
+  add_lines() |>
+  layout(yaxis = list(title = "Annual total precipitation (mm)"))
 ```
 
