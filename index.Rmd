@@ -4,11 +4,19 @@ output:
   html_document:
     toc: true
     toc_float: true
-    theme: cerulean
+    theme: cosmo
 ---
-
-# This is lz2951's personal website!
+# Welcome to lz2951's personal website!
 
 <img src="images/IMG_4324.JPG">
+
+# About me
+
+Welcome to everyone visiting this website! I'm the creator of this site. You can call me by my GitHub ID lz2951, or you can call my nickname Zilly! I'm currently a first-year master student majoring in Biostatistics at Columbia University Irving Medical Center (CUIMC). You can gain a deeper understanding of me by [reviewing my resume](Resume.html).
+
+# About this website
+
+This website was initially created as an assignment for an R data science course. Here, you can find my experiences in the form of a resume. If possible, I'll continue updating my other projects on this site in the future.
+
 
 
