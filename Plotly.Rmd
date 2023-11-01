@@ -1,0 +1,54 @@
+---
+title: "Plotly"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+
+library(tidyverse)
+library(plotly)
+library(p8105.datasets)
+```
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Chart A
+
+```{r}
+data("instacart")
+
+instacart = instacart[1:10000,]
+
+bar_ggplot =
+  instacart |>
+  group_by(aisle) |>
+  summarize(orders_from_aisle = n()) |>
+  filter(orders_from_aisle > 100) |>
+  ggplot(aes(x = fct_reorder(aisle, desc(orders_from_aisle)), y = orders_from_aisle)) +
+  geom_col() +
+  coord_flip() +
+  labs(x = "aisle", y = "orders belonging to certain aisle")
+
+ggplotly(bar_ggplot)
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Chart B
+
+```{r}
+
+```
+
+### Chart C
+
+```{r}
+
+```
+
