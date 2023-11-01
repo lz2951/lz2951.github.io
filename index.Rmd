@@ -1,0 +1,12 @@
+---
+title: "Personal website of lz2951"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    theme: cerulean
+---
+
+# This is lz2951's personal website!
+
+<img src="images/IMG_4324.JPG">
