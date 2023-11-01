@@ -1,0 +1,33 @@
+---
+title: "Longyu Zhang"
+author: "(+1)551-234-1358 lz2951@cumc.columbia.edu"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    theme: cosmo
+---
+
+# Education
+
+- School of Life Sciences and Biotechnology, Shanghai Jiao Tong University <p align="right">Sept 2018 - Aug 2022</p>
+B.S. in Bioinformatics
+
+- Mailman School of Public Health, Columbia University Irving Medical Center <p align="right">Sept 2023 - Now</p>
+M.S. in Biostatistics
+
+# Research Experience
+
+- The Exploration of Multi-omics Data Analysis Algorithm Based on Persistent Homology | Shanghai Jiao Tong University | Undergraduate Research Assistant <p align="right">Sept 2021 - Aug 2022</p>
+
+- The prospective study of the impact of antioxidant nutrients intake on the levels of immunological indicator and the expression of related genes | Shanghai Jiao Tong University | Undergraduate Research Assistant <p align="right">Oct 2020 - Oct 2021</p>
+
+- Controllable construction of zein/caseinate/pectin composite particles and its application in food nutrient delivery systems | Shanghai Jiao Tong University | Undergraduate Research Assistant <p align="right">Apr 2019 - Apr 2020</p>
+
+# Project
+
+- Diagnosis of pulmonary nodule malignancy using machine learning <p align="right">Spring semester 2020-2021</p>
+
+- Ylands Sandbox Game Design <p align="right">Fall semester 2019-2020</p>
+
+- Programming to find differences between two files containing bioinformatics data <p align="right">Spring semester 2019-2020</p>

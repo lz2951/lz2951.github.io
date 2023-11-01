@@ -18,5 +18,8 @@ Welcome to everyone visiting this website! I'm the creator of this site. You can
 
 This website was initially created as an assignment for an R data science course. Here, you can find my experiences in the form of a resume. If possible, I'll continue updating my other projects on this site in the future.
 
+# Contact me
+
+You can contact me via [email](lz2951@cumc.columbia.edu) or [GitHub](http://github.com/lz2951/). You can also find my addresses in website navigation bar which is on the very top of this page.
 
 

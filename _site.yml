@@ -5,12 +5,10 @@ navbar:
   right:
     - text: "About me/My resume"
       href: Resume.html
-    - text: "Projects"
-      href: projects.html
     - text: "Plotly"
       href: plotly.html
     - icon: fa-envelope fa-lg
-      href: mailto:<you@youremail.com>
+      href: mailto:<lz2951@cumc.columbia.edu>
     - icon: fa-github fa-lg
       href: http://github.com/lz2951/
 output:
