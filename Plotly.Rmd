@@ -14,10 +14,10 @@ library(plotly)
 library(p8105.datasets)
 ```
 
-Column {data-width=650}
+Column {data-width=550}
 -----------------------------------------------------------------------
 
-### Scatter plot of max and min temperature of weather stations from 2001 to 2010
+### Scatter plot of annual mean max and min temperature measured by weather stations from 2001 to 2010
 
 ```{r}
 data("ny_noaa")
@@ -47,10 +47,10 @@ ny_noaa |>
          yaxis = list(title = "mean tmax (degrees C)"))
 ```
 
-Column {data-width=350}
+Column {data-width=450}
 -----------------------------------------------------------------------
 
-### Chart B
+### Box plot of max and min temperature measured by weather stations from 2001 to 2010
 
 ```{r}
 ny_noaa |>
@@ -59,7 +59,7 @@ ny_noaa |>
   layout(yaxis = list(title = "temperature (degree C)"))
 ```
 
-### Chart C
+### Line plot of annual total precipitation measured by weather stations from 2001 to 2010
 
 ```{r}
 ny_noaa |>
