@@ -50,7 +50,7 @@ ny_noaa |>
 Column {data-width=450}
 -----------------------------------------------------------------------
 
-### Box plot of max and min temperature measured by weather stations from 2001 to 2010
+### Box plot of max and min temperature in New York from 2001 to 2010
 
 ```{r}
 ny_noaa |>
